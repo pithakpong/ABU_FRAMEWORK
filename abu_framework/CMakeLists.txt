@@ -11,6 +11,13 @@ find_package(ament_cmake_python REQUIRED)
 find_package(abu_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(OpenCV REQUIRED)
+
+include_directories(${OpenCV_INCLUDE_DIRS})
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -27,6 +34,13 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+add_executable(talker src/publish_image.cpp)
+ament_target_dependencies(talker rclcpp std_msgs sensor_msgs cv_bridge image_transport)
+target_link_libraries(talker ${OpenCV_LIBS})
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME}
+)
 install(
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
