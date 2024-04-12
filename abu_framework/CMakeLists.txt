@@ -46,7 +46,7 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 install(
-  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/mega_client.py scripts/Tsl_node.py scripts/Tsl_subscribe.py
+  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/mega_client.py scripts/Tsl_node.py scripts/Tsl_subscribe.py scripts/detect_server.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

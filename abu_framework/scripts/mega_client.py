@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 from abu_interfaces.srv import Mega
