@@ -41,11 +41,12 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 install(
-  DIRECTORY launch
+  DIRECTORY config launch
   DESTINATION share/${PROJECT_NAME}
 )
+install()
 install(
-  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/mega_client.py scripts/Tsl_node.py scripts/Tsl_subscribe.py scripts/detect_server.py
+  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/Tsl_node.py scripts/detect_server.py scripts/main_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
