@@ -1,0 +1,11 @@
+colortrack_publisher:
+  ros__parameters:
+    white: "[229,225,230]" # area1
+    green: " [80,158,47]" # area2
+    yellow: "[254,209,65]" # area3
+    red: "[244,54,76]" #red team
+    blue: "[48,157,226]" #blue team 
+    purple: "[161,90,149]" #fail rice
+    numbers: "64" #number of segment
+    start_point_roi: "(0,200)" # start point roi frame
+    end_point_roi: "(640,480)" # end point roi frame

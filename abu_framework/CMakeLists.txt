@@ -44,9 +44,8 @@ install(
   DIRECTORY config launch
   DESTINATION share/${PROJECT_NAME}
 )
-install()
 install(
-  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/Tsl_node.py scripts/detect_server.py scripts/main_node.py
+  PROGRAMS scripts/AreaPub.py scripts/mega_interface.py scripts/Tsl_node.py scripts/detect_server.py scripts/main_node.py scripts/image_track.py 
   DESTINATION lib/${PROJECT_NAME}
 )
 
